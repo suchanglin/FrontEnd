@@ -1,0 +1,26 @@
+# qianduan
+
+win7+IE11 : 按F12后报错描述
+
+Exception in window.onload: Error: An error has ocurredJSPlugin.3005
+Stack Trace:
+Error: An error has ocurredJSPlugin.3005 
+at getString 
+(res://C:/Program Files/Internet Explorer/F12Resources.dll/23/pluginhost/plugin.f12.js:5021:27) 
+
+at ToolWindowHelpers.loadString 
+(res://C:/Program Files/Internet Explorer/F12Resources.dll/23/Common/CommonMerged.js:5803:13) 
+at TabPanes.
+
+
+上述报错处理方法：安装windows7  补丁：KB3008923
+
+
+下载地址：
+http://www.microsoft.com/en-us/download/details.aspx?id=45134   （32位）
+ 
+http://www.microsoft.com/zh-cn/download/details.aspx?id=45154   （64位）
+
+
+
+温馨提示：下载安装完了要重新启动电脑，是重新启动电脑！！！
