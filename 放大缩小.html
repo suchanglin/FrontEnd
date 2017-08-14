@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<body>
+<div style="width:400px;margin:0 auto">
+<img src="http://img.mukewang.com/53577ee900016c2102080260.jpg" id="myImage"  /><br />
+<input type="button" id="max" value="放大"  />
+<input type="button" id="min" value="缩小"  />
+</div>
+<script>
+    window.onload = function(){
+		var maxBtn = document.getElementById("max");
+		maxBtn.onclick = function(){//添加放大点击事件
+			maxFun();//放大函数	
+		}
+		var img = document.getElementById("myImage");
+		var maxWidth = img.width*2;//放大宽度的极限值
+		var maxHeight = img.height*2;//放大的高度极限值
+		
+		var minWidth = img.width*0.5;//缩小宽度的极限值
+		var minHeight = img.height*0.5;//缩小高度的极限值
+		//定义放大函数
+		function maxFun(){
+			var endWidth = img.width*1.3;//每次点击后的宽度
+			var endHeight = img.height*1.3;//每次点击后的高度
+			var maxTimer = setInterval(function(){
+					if(img.width < endWidth){
+						if(img.width < maxWidth){
+							img.width = img.width*1.05;
+							img.height = img.height*1.05;
+						}else{
+							alert("已经放大到最大值了");
+							clearInterval(maxTimer);	
+						}
+					}else{
+						clearInterval(maxTimer);	
+					}
+			},10);	
+		}
+		
+		var minBtn = document.getElementById("min");
+		minBtn.onclick = function(){
+			minFun();	
+		}
+		//实现缩小函数
+		function minFun(){
+			var endWidth = img.width*0.7;//每次点击后的宽度
+			var endHeight = img.height*0.7;//每次点击后的高度
+            
+			var minTimer = setInterval(function(){
+					if(img.width > endWidth){
+						if(img.width > minWidth){
+							img.width = img.width*0.95;
+							img.height = img.height*0.95;
+						}else{
+							alert("已经缩小到最小值了");
+							clearInterval(minTimer);	
+						}
+					}else{
+						
+						clearInterval(minTimer);	
+					}
+			},10);	
+		}
+           
+            
+		}
+		
+	
+	
+</script>
+</body>
+</html>
