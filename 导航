@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .top-nav
+        {
+            font-size: 12px;
+            font-weight: bold;
+            list-style: none;
+            border-bottom: 8px solid #DC4E1B;
+            overflow: auto;
+        }
+        .top-nav li
+        {
+            float: left;
+            margin-right: 1px;
+        }
+        .top-nav li a
+        {
+            line-height: 20px;
+            text-decoration: none;
+            background: #DDDDDD;
+            color: #666666;
+            display: block;
+            width: 80px;
+            text-align: center;
+        }
+       
+        /*设置正常状态英文菜单隐藏*/
+        .top-nav li a span{ display:none; }
+        
+        /*鼠标移动到链接上面时将英文菜单显示*/
+        .top-nav li a:hover span{ display:block;color:#FFF; background-color:#DC4E1B;}
+        
+        /*鼠标移动到链接上面时将中文菜单位置上移*/
+        
+       .top-nav li a:hover { margin-top:-20px;} /* 巧妙隐藏，上移动 */
+ 
+    </style>
+</head>
+<body>
+    <ul class="top-nav">
+        <li><a href="#">首页<span>Home</span></a></li>
+        <li><a href="#">课程大厅<span>Course</span></a></li>
+        <li><a href="#">学习中心<span>Learn</span></a></li>
+        <li><a href="#">关于我们<span>About</span></a></li>
+    </ul>
+</body>
+</html>
